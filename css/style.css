@@ -424,6 +424,13 @@ code {
 .card.bg-primary, .card.bg-success, .card.bg-info, .card.bg-warning, .card.bg-danger {
   border: 1px solid rgba(0, 0, 0, 0.125); }
 
+
+.card:hover {
+  border: 1px solid darkorange ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  box-sizing: content-box;
+}
 .card-block {
   padding-left: 1rem;
   padding-right: 1rem;}
@@ -506,9 +513,27 @@ code {
     text-transform: none !important;
     letter-spacing: 0 !important; }
 
-.user-dropdown .dropdown-toggle::after {
-  margin-top: 1rem;
-  margin-left: 1rem; }
+@media screen and (max-width: 576px){
+  .logout-button{
+    display: none;
+  }
+
+  #user {
+    display: none;
+  }
+  .user-dropdown .dropdown .dropdown-toggle::after {
+    display: none !important;
+    margin-top: 1rem;
+    margin-left: 1rem; }
+}
+
+@media screen and (min-width: 576px){
+  .user-dropdown .dropdown-toggle::after {
+    margin-top: 1rem;
+    margin-left: 1rem; }
+}
+
+
 
 .user-progress {
   margin-top: 1rem; }
